@@ -40,6 +40,8 @@ var g_logger logger = logger{
 	size:     1024 * 1024, /* 1M */
 }
 
+
+// 设置输出日志文件路径
 func SetFilepath(filepath string) {
 	g_logger.mutex.Lock()
 	defer func() {
@@ -49,6 +51,8 @@ func SetFilepath(filepath string) {
     g_logger.filepath = filepath
 }
 
+
+// 设置日志级别
 func SetLevel(level int) {
 	g_logger.mutex.Lock()
 	defer func() {
@@ -58,6 +62,7 @@ func SetLevel(level int) {
     g_logger.level = level;
 }
 
+// 设置日志重写大小
 func SetSize(size int) {
 	g_logger.mutex.Lock()
 	defer func() {
