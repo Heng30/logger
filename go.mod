@@ -1,3 +1,3 @@
-module github.com/Heng30/logger/v1.0.0
+module github.com/Heng30/logger
 
 go 1.13
